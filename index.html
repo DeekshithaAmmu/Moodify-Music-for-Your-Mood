@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moodify recommends music to match how you feel.">
+  <title>Moodify – Music for Your Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">♪</span> Moodify</a>
+    <nav>
+      <a href="#moods">Moods</a>
+      <button class="nav-button" id="favoritesNav">♡ Saved Favorites <span id="favoriteCount">0</span></button>
+      <button class="nav-button" id="guideNav">▣ Project Guide</button>
+    </nav>
+    <button class="surprise top-surprise" id="surpriseTop">✧ Surprise Me</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">♬ &nbsp; Mood-Based Music Recommendation System</div>
+      <h1>Moodify – Music for Your<br class="desktop-break"> Mood</h1>
+      <p class="subtitle">Tell us how you feel, and we'll find the music for you.</p>
+      <div class="hero-actions">
+        <button class="surprise" id="surpriseMain">✧ Surprise Me With a Mood</button>
+        <button class="outline-button" id="algorithmButton">▣ How Algorithm Works</button>
+      </div>
+    </section>
+
+    <section class="mood-section" id="moods">
+      <h2>How are you feeling today?</h2>
+      <p class="section-subtitle">Choose a mood below to generate 5 personalized song recommendations.</p>
+      <div class="mood-grid" id="moodGrid"></div>
+    </section>
+
+    <section class="results hidden" id="results">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR PERSONAL PLAYLIST</span><h2 id="resultTitle">Songs for your mood</h2></div>
+        <button class="text-button" id="clearResults">✕ Clear</button>
+      </div>
+      <div id="songList" class="song-list"></div>
+    </section>
+
+    <section class="info-panel hidden" id="favoritesPanel">
+      <div class="section-heading"><div><span class="eyebrow">YOUR COLLECTION</span><h2>Saved Favorites</h2></div><button class="text-button" id="closeFavorites">✕ Close</button></div>
+      <div id="favoritesList" class="song-list"></div>
+    </section>
+
+    <section class="info-panel hidden" id="guidePanel">
+      <div class="section-heading"><div><span class="eyebrow">ABOUT THIS PROJECT</span><h2>Project Guide</h2></div><button class="text-button" id="closeGuide">✕ Close</button></div>
+      <p>Moodify is a mood-based music recommendation prototype. Users select a mood and receive a curated set of song suggestions that fit that feeling.</p>
+      <div class="guide-grid">
+        <article><h3>1. Choose a mood</h3><p>Select Happy, Sad, Relaxed or Angry from the mood cards.</p></article>
+        <article><h3>2. Get recommendations</h3><p>The app selects five songs from its built-in mood library.</p></article>
+        <article><h3>3. Save favorites</h3><p>Use the heart button to save songs in this browser.</p></article>
+      </div>
+      <p class="note">This is a front-end demonstration. Recommendations come from a sample dataset; music playback and streaming require a licensed music service or API integration.</p>
+    </section>
+
+    <section class="info-panel hidden" id="algorithmPanel">
+      <div class="section-heading"><div><span class="eyebrow">RECOMMENDATION LOGIC</span><h2>How the Algorithm Works</h2></div><button class="text-button" id="closeAlgorithm">✕ Close</button></div>
+      <ol class="algorithm-list">
+        <li><b>Input:</b> The user selects one of the available moods.</li>
+        <li><b>Matching:</b> The selected mood is used as a key to find songs in the local recommendation dataset.</li>
+        <li><b>Selection:</b> Five matching songs are displayed with their artist and a short mood description.</li>
+        <li><b>Personalization:</b> Users can save preferred songs to browser storage for later access.</li>
+      </ol>
+    </section>
+  </main>
+  <footer><span class="brand small-brand"><span class="brand-icon">♪</span> Moodify</span><span>Music that meets your mood.</span><span>Student project demonstration</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
